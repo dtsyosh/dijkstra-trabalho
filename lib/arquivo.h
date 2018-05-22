@@ -31,6 +31,7 @@ void ler_arquivo(FILE * arquivo, int matriz_adjacencia[][T]) {
 
 	int i, j;
 
+	// Realizando a leitura do arquivo e gravando na matriz de adjacencia
 	for(i = 1; i <= T; i++)
 		for(j = 1; j <= T; j++) 
 			fscanf(arquivo, "%d", &matriz_adjacencia[i][j]);

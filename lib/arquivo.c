@@ -27,7 +27,7 @@ Parâmetros:
 	FILE * arquivo = Arquivo aberto
 	int vetor[] = Vetor que irá receber a entrada contida no arquivo
 */
-void ler_arquivo(FILE * arquivo, int matriz_adjacencia[][T]) {
+void ler_arquivo(FILE * arquivo, int matriz_adjacencia[][MAX_T]) {
 
 	int i, j;
 

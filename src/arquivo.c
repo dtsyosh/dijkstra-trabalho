@@ -1,4 +1,4 @@
-#include "arquivo.h"
+#include "../lib/arquivo.h"
 
 /*
 Parâmetros: 

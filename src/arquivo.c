@@ -37,3 +37,21 @@ void ler_arquivo(FILE * arquivo, int matriz_adjacencia[][MAX_T]) {
 			fscanf(arquivo, "%d", &matriz_adjacencia[i][j]);
 		
 }
+
+/*
+Parâmetros:
+	FILE * arquivo = arquivo de saída aberto com a opção "w"
+	int vetor_distancias[T] = vetor de distancias do vertice que deseja fazer a tabela de repasse
+	int fechar_arquivo = Verificação se pode fechar(salvar) o arquivo
+Retorno:
+	Vazio
+*/
+void escrever_tabela_repasse(FILE * arquivo, int vetor_distancias[T], int fechar_arquivo) {
+
+	fprintf(arquivo,
+		"________\n u | %d |\n v | %d |\n x | %d |\n w | %d |\n y | %d |\n z | %d |\n________\n", vetor_distancias[0], vetor_distancias[1], vetor_distancias[2],
+		  vetor_distancias[3], vetor_distancias[4], vetor_distancias[5]);
+
+	if(fechar_arquivo)
+		fclose(arquivo);
+}

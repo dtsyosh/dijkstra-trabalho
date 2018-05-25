@@ -26,13 +26,12 @@ void ler_arquivo(FILE * arquivo, int matriz_adjacencia[][MAX_T]);
 
 /*
 Parâmetros:
-	FILE * arquivo = arquivo de saída aberto com a opção "w"
 	int vetor_distancias[T] = vetor de distancias do vertice que deseja fazer a tabela de repasse
 	int fechar_arquivo = Verificação se pode fechar(salvar) o arquivo
 Retorno:
 	Vazio
 */
-void escrever_tabela_repasse(FILE * arquivo, int vetor_distancias[T], int fechar_arquivo);
+void escrever_tabela_repasse(int vetor_distancias[T], int fechar_arquivo);
 
 #endif
 

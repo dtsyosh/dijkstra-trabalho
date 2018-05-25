@@ -46,12 +46,13 @@ Parâmetros:
 Retorno:
 	Vazio
 */
-void escrever_tabela_repasse(FILE * arquivo, int vetor_distancias[T], int fechar_arquivo) {
+void escrever_tabela_repasse(int vetor_distancias[T], int fechar_arquivo) {
 
-	fprintf(arquivo,
-		"________\n u | %d |\n v | %d |\n x | %d |\n w | %d |\n y | %d |\n z | %d |\n________\n", vetor_distancias[0], vetor_distancias[1], vetor_distancias[2],
-		  vetor_distancias[3], vetor_distancias[4], vetor_distancias[5]);
+	FILE * arquivo_saida = abrir_arquivo("saida.txt", "a");
+	fprintf(arquivo_saida,
+		"________\n u | %d |\n v | %d |\n x | %d |\n w | %d |\n y | %d |\n z | %d |\n________\n", vetor_distancias[1], vetor_distancias[2], vetor_distancias[3],
+		  vetor_distancias[4], vetor_distancias[5], vetor_distancias[6]);
 
 	if(fechar_arquivo)
-		fclose(arquivo);
+		fclose(arquivo_saida);
 }

@@ -15,13 +15,12 @@ int main(int argc, char const *argv[]) {
 
 	int v[6] = {1, 0, 2, 5, 7, 9};
 
-	for(i = 1; i <= T; i++) {
-		for(j = 1; j <= T; j++)
-			printf("%d ", matriz_adjacencia[i][j]);
-		printf("\n");
+	for(i = 1; i < T; i++) {
+		dijkstra(matriz_adjacencia, i, 0);
 	}
 
-	escrever_tabela_repasse(arquivo_saida, v, 1);
+	dijkstra(matriz_adjacencia, 6, 1);
+
 
 
 	return 0;
